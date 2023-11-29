@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminLayout.master.cs" Inherits="BookMyVNRide_DBMS.AdminLayout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        a{
+            color:aliceblue;
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table style="width:100%;height:60px;background-color:#022277;text-align:center;border-style:solid;color:aliceblue;font-weight:bold">
+                <tr>
+                    <td>
+                        Welcome to BookMyVNRide
+                    </td>
+                    <td>
+                        Welcome Back : <asp:Label ID="lbl" runat="server"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+
+            <table style="width:100%;height:60px;background-color:#022277;text-align:center;border-style:solid;color:aliceblue;font-weight:bold">
+                <tr>
+                    <td><a href="AdminHome.aspx">Home</a></td>
+                    <td><a href="AddBus.aspx">Add new Bus</a></td>
+                    <td><a href="DisplayStudents.aspx">Bookings</a></td>
+                    <td><a href="ViewBuses.aspx">Bus wise Bookings</a></td>                    
+                    <td>
+                        <asp:LinkButton ID="link" runat="server" OnClick="link_Click">Logout</asp:LinkButton>
+                </td>
+                        </tr>
+            </table>
+            <!--In master page content place holder is the body-->
+       <div style="margin:20px;padding:20px;border-style:solid;background-color:#dfdfdf">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+        <!--footer-->
+            <table style="width:100%;background-color:#022277;text-align:center;border-style:solid;color:aliceblue;font-weight:bold">
+                <tr>
+                    <td>
+                        www.Vnr.com @2023
+                    </td>
+                </tr>
+            </table>
+    </form>
+</body>
+</html>
